@@ -123,3 +123,13 @@ Licensed under MIT
   background: #fff;
   min-height: 460px;
 }
+
+
+/* updated by melody*/
+a {
+  color: #343a40;
+}
+
+.bd-navbar {
+  background-color: #563d7c;
+}
