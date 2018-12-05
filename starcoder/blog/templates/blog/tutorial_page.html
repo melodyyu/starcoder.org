@@ -34,9 +34,7 @@
                 {{ post.body|safe|truncatewords_html:70 }}
             {% endif %}
           </p>
-        <div class="text-center ">
-          <a class="" href="{% post_date_url post blog_page %}">Continue reading »</a>
-       </div>
+          <a href="{% post_date_url post blog_page %}" class="btn btn-primary">Read More &rarr;</a>
 
         </div>
         <div class="card-footer text-muted">
