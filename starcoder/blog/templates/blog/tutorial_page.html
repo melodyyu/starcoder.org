@@ -7,10 +7,10 @@
         <h2 class="text-center text-uppercase text-white">Tutorials</h2>
         <hr class="star-light mb-5">
         <div class="row">
-    {% paginate 5 posts %}
+    {% paginate 6 posts %}
     {% for post in posts %}
       <!-- Blog Post --> 
-          <div class="col-lg-5 ml-auto">
+          <div class="col-lg-4 ml-auto">
           <div class="card mb-4">
                 {% if post.header_image %}
                 {% image post.header_image original as header_image %}
@@ -18,16 +18,16 @@
                 <img src="{{ header_image.url }}" class="card-img-top" ></img> </a>
                 {% endif %}
                 <div class="card-body">
-                        <p class="card-title">
+                        <h5 class="card-title">
                         <a href="{% post_date_url post blog_page %}">{{ post.title }}</a>
-                        </p>
+                        </h5>
                         <p class="card-text text-primary">
-                        </p><div class="rich-text"><p>
+                        </p><div class="rich-text">
                         {% if post.excerpt %}
+                                <p>
                                 {{ post.excerpt|markdown|safe }}
-                        {% endif %}
-                        </p><div class="rich-text"><p>This Wagtail tutorial series teaches you how to create a standard blog using Wagtail CMS step by step.</p></div>
-                        <p></p>
+                                </p>
+                        {% endif %} 
                 </div>
           </div>
           </div>
@@ -36,9 +36,11 @@
     {% endfor %}
 
    <!-- Pagination --> 
+   <div class="center">
     <ul class="pagination justify-content-center mb-4">
       {% show_pages %}
     </ul>
+    </div>
 
         </div>
         </section>
