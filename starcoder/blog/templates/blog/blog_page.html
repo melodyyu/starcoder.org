@@ -5,10 +5,10 @@
 
 {% block content %}
 
-    <div class="container">
+
+    <div class="container main-content-area">
       <div class="row">
  
-
     {% if search_term %}
       <header class="page-header">
           <h3 class="page-title">Search Results for <span>{{ search_type }}: {{ search_term }}</span></h3>
@@ -47,7 +47,6 @@
             Posted on {{ post.date }}
         </div>
       </div>
-
 
     {% endfor %}
 

@@ -9,40 +9,44 @@
 {% block content %}
 
 
-<div id="content" class="site-content">
-<div class="top-section">
-</div>
-
-
 <div class="container main-content-area">
-<div class="row side-pull-left">
-<div class="main-content-inner col-sm-12 col-md-12 col-md-offset-1">
-<div id="primary" class="content-area">
-<main id="main" class="site-main" role="main">
+<div class="row ">
+
+<article id="post-31" class="post type-post status-publish format-standard has-post-thumbnail">
+
     {% if post.header_image %}
         {% image post.header_image original as header_image %}
         <img src="{{ header_image.url }}" class="img-fluid rounded" ></img>
-        <hr>
     {% endif %}
-    </div>
 
-    <h1>{{ post.title }}</h1>
+  <div class="post-inner-content">
+  <header class="entry-header page-header">
+    <h1 class="entry-title">{{ post.title }}</h1>
 
-    <p>
-        <i class="far fa-clock"></i> {{post.date}} &nbsp;
-        <i class="far fa-user"></i> {{post.owner}} &nbsp;
-        {% post_categories %}
-    </p>
-    <hr>
-    {{ post.body }}
-    <hr>
+    <div class="">
+  Last updated on
+    <time class="entry-date">{{post.date}}</time>
+  by
+    <span class="author vcard">
+    {{post.owner}}
+    </span>
     </div>
-    </div>
+  </header>
 
-    {% post_tags_list %}
+ <hr>
 
-    {% show_comments %}
+ <div class="entry-content">
+     {{ post.body }}
+     <hr>
+ </div>
+ 
+ 
+    <div>
+     {% show_comments %}
     </div>
+</div>
+</article>
+</div>
 </div>
 
     <script type="text/x-mathjax-config">
