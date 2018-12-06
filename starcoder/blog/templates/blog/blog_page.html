@@ -5,6 +5,10 @@
 
 {% block content %}
 
+    <div class="container">
+      <div class="row">
+ 
+
     {% if search_term %}
       <header class="page-header">
           <h3 class="page-title">Search Results for <span>{{ search_type }}: {{ search_term }}</span></h3>
@@ -14,7 +18,7 @@
     {% paginate 5 posts %}
     {% for post in posts %}
       <!-- Blog Post -->
-      <div class="card mb-4">
+      <div class="card mb-9">
 
         {% if post.header_image %}
             {% image post.header_image original as header_image %}
@@ -44,10 +48,16 @@
         </div>
       </div>
 
+
     {% endfor %}
 
+
+      </div>
+      </div>
+
+
     <!-- Pagination -->
-    <ul class="pagination justify-content-center mb-4">
+    <ul class="pagination justify-content-center mb-9">
       {% show_pages %}
     </ul>
 

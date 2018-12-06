@@ -7,11 +7,25 @@
 {% block canonical %}{% canonical_url self%}{% endblock canonical %}
 
 {% block content %}
+
+
+<div id="content" class="site-content">
+<div class="top-section">
+</div>
+
+
+<div class="container main-content-area">
+<div class="row side-pull-left">
+<div class="main-content-inner col-sm-12 col-md-12 col-md-offset-1">
+<div id="primary" class="content-area">
+<main id="main" class="site-main" role="main">
     {% if post.header_image %}
         {% image post.header_image original as header_image %}
         <img src="{{ header_image.url }}" class="img-fluid rounded" ></img>
         <hr>
     {% endif %}
+    </div>
+
     <h1>{{ post.title }}</h1>
 
     <p>
@@ -22,10 +36,14 @@
     <hr>
     {{ post.body }}
     <hr>
+    </div>
+    </div>
 
     {% post_tags_list %}
 
     {% show_comments %}
+    </div>
+</div>
 
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({

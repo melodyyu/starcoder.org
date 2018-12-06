@@ -1,52 +1,48 @@
-
 {% extends "blog/base.html" %}
-
 {% load static wagtailcore_tags wagtailimages_tags blogapp_tags el_pagination_tags wagtailmd %}
-
 {% block content %}
 
-    {% if search_term %}
-      <header class="page-header">
-          <h3 class="page-title">Search Results for <span>{{ search_type }}: {{ search_term }}</span></h3>
-      </header>
-    {% endif %}
-
+       <section class="bg-primary mb-0" id="tutorials">
+        <div class="container">
+        <h2 class="text-center text-uppercase text-white">Tutorials</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
     {% paginate 5 posts %}
     {% for post in posts %}
-      <!-- Blog Post -->
-      <div class="card mb-4">
-
-        {% if post.header_image %}
-            {% image post.header_image original as header_image %}
-            <a href="{% post_date_url post blog_page %}">
-              <img src="{{ header_image.url }}" class="card-img-top" ></img>
-            </a>
-        {% endif %}
-
-        <div class="card-body">
-          <h2 class="card-title">
-            <a href="{% post_date_url post blog_page %}">{{ post.title }}</a>
-          </h2>
-          <p class="card-text">
-            {% if post.excerpt %}
-                {{ post.excerpt|markdown|safe }}
-            {% else %}
-                {{ post.body|safe|truncatewords_html:70 }}
-            {% endif %}
-          </p>
-          <a href="{% post_date_url post blog_page %}" class="btn btn-primary">Read More &rarr;</a>
-
+      <!-- Blog Post --> 
+          <div class="col-lg-5 ml-auto">
+          <div class="card mb-4">
+                {% if post.header_image %}
+                {% image post.header_image original as header_image %}
+                <a href="{% post_date_url post blog_page %}">
+                <img src="{{ header_image.url }}" class="card-img-top" ></img> </a>
+                {% endif %}
+                <div class="card-body">
+                        <p class="card-title">
+                        <a href="{% post_date_url post blog_page %}">{{ post.title }}</a>
+                        </p>
+                        <p class="card-text text-primary">
+                        </p><div class="rich-text"><p>
+                        {% if post.excerpt %}
+                                {{ post.excerpt|markdown|safe }}
+                        {% endif %}
+                        </p><div class="rich-text"><p>This Wagtail tutorial series teaches you how to create a standard blog using Wagtail CMS step by step.</p></div>
+                        <p></p>
+                </div>
+          </div>
+          </div>
         </div>
-        <div class="card-footer text-muted">
-            Posted on {{ post.date }}
-        </div>
-      </div>
 
     {% endfor %}
 
-    <!-- Pagination -->
+   <!-- Pagination --> 
     <ul class="pagination justify-content-center mb-4">
       {% show_pages %}
     </ul>
+
+        </div>
+        </section>
+
+
 
 {% endblock %}

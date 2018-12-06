@@ -103,6 +103,9 @@ class BlogPage(RoutablePageMixin, Page):
             self.search_type = 'search'
         return Page.serve(self, request, *args, **kwargs)
 
+class TutorialPage(BlogPage):
+    def get_template(self, request):
+        return 'blog/tutorial_page.html'
 
 class PostPage(Page):
     #body = MarkdownField()
