@@ -107,6 +107,10 @@ class TutorialPage(BlogPage):
     def get_template(self, request):
         return 'blog/tutorial_page.html'
 
+class PortfolioPage(BlogPage):
+    def get_template(self, request):
+        return 'blog/portfolio_page.html'
+
 class PostPage(Page):
     #body = MarkdownField()
     date = models.DateTimeField(verbose_name="Post date", default=datetime.datetime.today)

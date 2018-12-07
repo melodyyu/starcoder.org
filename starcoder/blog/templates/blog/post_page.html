@@ -9,14 +9,16 @@
 {% block content %}
 
 
-<div class="container main-content-area">
+<div class="container main-content-area mb-12">
 <div class="row ">
+<div class="main-content-inner col-sm-12 col-md-12 col-md-offset-1">
+<div id="primary" class="content-area">
 
 <article id="post-31" class="post type-post status-publish format-standard has-post-thumbnail">
 
     {% if post.header_image %}
         {% image post.header_image original as header_image %}
-        <img src="{{ header_image.url }}" class="img-fluid rounded" ></img>
+        <img src="{{ header_image.url }}" class="img-fluid rounded single-featured wp-post-image img-responsive" ></img>
     {% endif %}
 
   <div class="post-inner-content">
@@ -46,6 +48,8 @@
     </div>
 </div>
 </article>
+</div>
+</div>
 </div>
 </div>
 

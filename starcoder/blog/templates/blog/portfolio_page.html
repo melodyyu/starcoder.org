@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+{% load static wagtailcore_tags wagtailimages_tags blogapp_tags el_pagination_tags wagtailmd %}
+{% block content %}
+
+   <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+        <br>
+        <br>
+        <div class="row">
+
+    {% paginate 6 posts %}
+    {% for post in posts %}
+      <!-- Blog Post --> 
+
+       {% if post.header_image %}
+         {% image post.header_image original as header_image %}
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              </div>
+               <a href="{% post_date_url post blog_page %}">
+              <img src="{{ header_image.url }}" class="img-fluid" ></img> </a>
+          </div>
+      {% endif %}
+
+    {% endfor %}
+
+        </div>
+      </div>
+    </section>
+
+
+   <!-- Pagination --> 
+   <div class="center">
+    <ul class="pagination justify-content-center mb-4">
+      {% show_pages %}
+    </ul>
+    </div>
+
+        </div>
+        </section>
+
+{% endblock %}
