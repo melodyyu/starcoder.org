@@ -6,6 +6,7 @@
 body { 
    background: #f2f2f2; 
 }
+
 div.container.main-content-area {
    margin-top: 90px;
    margin-bottom: 30px;
@@ -18,3 +19,132 @@ div.post-inner-content {
     border-top: none;
 }
 
+.panel {
+  -webkit-box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.05);
+  -khtml-box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.05);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+  .panel .panel-body {
+    height: 200px; }
+  .panel img {
+    padding: 1.875em 0 2.5em 0; }
+  .panel h3 {
+    color: #666666;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  .panel:hover {
+    -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -khtml-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+  .panel .panel-footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+
+.center-block, article img, .lesson-steps .challenge pre, .panel-course, .panel-partner, .panel-lesson {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+
+div.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+
+div.panel-body {
+  padding: 15px; }
+  .panel-body:before, .panel-body:after {
+    content: " ";
+    display: table; }
+  .panel-body:after {
+    clear: both; }
+
+div.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px; }
+  .panel-heading > .dropdown .dropdown-toggle {
+    color: inherit; }
+
+div.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit; }
+  .panel-title > a,
+  .panel-title > small,
+  .panel-title > .small,
+  .panel-title > small > a,
+  .panel-title > .small > a {
+    color: inherit; }
+
+div.panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px; }
+
+div.panel-course {
+  max-width: 320px;
+  margin-bottom: 30px; }
+  .panel-course h3 {
+    margin-top: 0px;
+    color: white;
+    font-size: 36px;
+    font-size: 2.25rem;
+    font-weight: 700; }
+  .panel-course .panel-body {
+    height: 260px; }
+  .panel-course .panel-footer {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 24px;
+    font-weight: 300;
+    color: white;
+    border-top: 0; }
+  .panel-course img {
+    padding-top: 20px;
+    padding-bottom: 33px; }
+  .panel-course:hover {
+    -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -khtml-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+
+h3 {
+  font-family:museo-sans-rounded;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-top: 0;
+  padding-top: 26px;
+  margin-bottom: 25px; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  vertical-align: middle; }
+
+img {
+  border: 0; }
