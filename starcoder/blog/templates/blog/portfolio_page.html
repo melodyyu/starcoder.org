@@ -38,7 +38,47 @@
     </ul>
     </div>
 
+   </div>
+ </section>
+
+
+<section>
+  <div class="container fixed">
+    <div class="row u-padding-top--xx-large">
+      
+    {% paginate 6 posts %}
+    {% for post in posts %}
+      <!-- Blog Post --> 
+         {% image post.header_image original as header_image %}
+
+        <div class="col-sm-6 col-md-4">
+          <a href="{% post_date_url post blog_page %}" class="panel-link">
+            <div class="panel panel-course" style="background-image: url(//codeclubprojects.org/public/images//courses/scratch/background.png);">
+              <div class="panel-body">
+                <h3 class="text-center">{{post.title}}</h3>
+                <img class="center-block" src="//codeclubprojects.org/public/images//courses/scratch/scratch-character.png">
+              </div>
+
+              <div class="panel-footer text-center" style="background-color: #e18932;">
+                38
+
+                
+                  Projects
+                
+              </div>
+            </div>
+          </a>
+
         </div>
-        </section>
+
+    {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+
+
+
 
 {% endblock %}
