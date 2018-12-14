@@ -39,7 +39,10 @@
 
  <div class="entry-content">
      {{ post.body }}
-     <hr>
+ </div>
+
+ <div class="entry-content">
+     {{ post.body2 | markdown | safe }}
  </div>
  
  

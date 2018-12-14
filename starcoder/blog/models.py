@@ -107,12 +107,14 @@ class TutorialPage(BlogPage):
     def get_template(self, request):
         return 'blog/tutorial_page.html'
 
+    def get_posts(self):
+        return PostPage.objects.descendant_of(self).live().order_by('date')
+
 class PortfolioPage(BlogPage):
     def get_template(self, request):
         return 'blog/portfolio_page.html'
 
 class PostPage(Page):
-    #body = MarkdownField()
     date = models.DateTimeField(verbose_name="Post date", default=datetime.datetime.today)
     excerpt = MarkdownField(
         verbose_name='excerpt', blank=True,
@@ -129,7 +131,7 @@ class PostPage(Page):
         ('code', CodeBlock(label="code")),
     ], null=True, blank=True)
 
-    #body3 = MarkdownField(null = True, blank=True)
+    body2 = MarkdownField(null = True, blank=True)
 
     header_image = models.ForeignKey(
         'wagtailimages.Image',
@@ -143,8 +145,8 @@ class PostPage(Page):
 
     content_panels = Page.content_panels + [
         ImageChooserPanel('header_image'),
-        #MarkdownPanel("body"),
         StreamFieldPanel('body'),
+        MarkdownPanel("body2"),
         #MarkdownPanel("body3"),
         MarkdownPanel("excerpt"),
         FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
